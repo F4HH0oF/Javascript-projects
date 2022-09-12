@@ -1,0 +1,114 @@
+.slideshow {
+    background-image: url(/images/fwdchataldja/IMG_9936.jpg);
+    padding: 20rem 20rem 20rem 1rem; 
+    background-size: cover;
+    background-position: left;
+    margin:  1.5rem 1.5rem 1rem 1.5rem ;
+    box-shadow: 0px 5px 25px rgb(141, 140, 140);
+}
+
+.slideshow a {
+    text-decoration: none;
+    color: #fff;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    letter-spacing: 1px;
+    padding: 0 1rem 0 1rem;
+    cursor: pointer;
+
+    -webkit-box-flex: auto;
+    -ms-flex: auto;
+    flex: auto;
+    text-align: center;
+}
+
+.slideshow h2 {
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+.slideshow p {
+    max-width: 60ch;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.slideshow a:hover {
+    box-shadow: 0px 0px 10px black;
+    background: rgba(0, 0, 0, 0.529);
+} 
+
+.hover-shadow-box-animation {
+    display: inline-block;
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    margin: 0.625rem;
+    transition-duration: .5s;
+    transition-property: box-shadow, transform;
+}
+  
+.hover-shadow-box-animation:hover,
+.hover-shadow-box-animation:focus,
+.hover-shadow-box-animation:active {
+    box-shadow: 1px 10px 10px -10px rgba(0, 0, 24, 0.5);
+    transform: scale(1.01);
+}
+
+/* images/fwdchataldja/IMG_9930.jpg */
+/* Жилищна сграда "Чаталджа" в центъра на София. */
+/* Луксозна жилищна сграда на шест етажа, с модерна архитектура, визия и разпределение. */
+
+@media (max-width: 780px) {
+    .slideshow a {
+        text-decoration: none;
+        color: #fff;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.4);
+        letter-spacing: 1px;
+        padding: 0 0rem 0 1rem;
+        cursor: pointer;
+
+        -webkit-box-flex: auto;
+        -ms-flex: auto;
+        flex: auto;
+        text-align: center;
+        bottom: 20%;
+    }
+
+    .slideshow {
+        background-image: url(/images/fwdchataldja/IMG_9930.jpg);
+        padding: 20rem 20rem 20rem 1rem; 
+        background-size: cover;
+        background-position: left;
+        margin:  1.5rem 0 1rem 0;
+        box-shadow: 0px 5px 25px rgb(141, 140, 140);
+    }
+} 
+
+@media (max-width: 400px) {
+    .slideshow a {
+        text-decoration: none;
+        color: #fff;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.4);
+        letter-spacing: 1px;
+        padding: 0 0rem 0 1rem;
+        cursor: pointer;
+
+        -webkit-box-flex: auto;
+        -ms-flex: auto;
+        flex: auto;
+        text-align: center;
+        bottom: 30%;
+    }
+
+    .slideshow {
+        background-image: url(images/fwdchataldja/IMG_9930.jpg);
+        padding: 20rem 20rem 15rem 1rem; 
+        background-size: cover;
+        background-position: left;
+        margin:  1.5rem 0 1rem 0;
+        box-shadow: 0px 5px 25px rgb(141, 140, 140);
+    }
+} 

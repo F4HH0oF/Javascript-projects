@@ -1,0 +1,33 @@
+.BText {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 10rem 0 3rem 0;   
+}
+
+.BText h2 {
+    font-size: 1.9rem;
+    color: red;
+    margin-bottom:1rem;
+
+}
+
+.BText p {
+    max-width: 60ch;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 900px) {
+    .BText {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 4rem 0 3rem 0;   
+    }
+}
+
+

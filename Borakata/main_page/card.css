@@ -1,0 +1,206 @@
+
+
+.C-Title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    margin-bottom: -2rem;
+    color: red;
+    font-size: 23px;
+    text-shadow: 1px 1px rgb(138, 138, 138);
+    text-align: center;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 8rem 2rem 8rem; 
+}
+
+.c1 {background-image: url(/images/buildings/chatalga.jpg);}
+.c2 {background-image: url(/images/buildings/ovchakupel.jpg);}
+.c3 {background-image: url(/images/buildings/chatalga.jpg);}
+
+.card {
+    color: var(--clr-neutral-100);
+    background-size: cover;
+    background-position:center;
+    padding: 11rem 0 0;
+    max-width: 34ch;
+    min-width: 300px;
+    border-radius: .2rem;
+    overflow: hidden;
+    box-shadow: 0px 0px 5px black;
+    background-position: center;
+    transition: transform 500ms ease;
+    width: calc(50% - 2rem);
+    margin: 2rem;
+}
+
+.c2 {
+    background-position: left;
+}
+
+.card:hover,
+.card:focus-within {
+    transform: scale(1.03);
+}
+
+.card-content {
+    --padding: 1.5rem;
+    padding: var(--padding);
+    background: linear-gradient( 
+        rgba(0, 0, 0, 0), 
+        rgba(0, 0, 0, 0.45), 
+        rgba(0, 0,0, 1)
+    );
+}
+
+.card h2 {
+    margin-bottom: 35px;
+}
+
+.card-title {
+    position: relative;
+    width: max-content;
+}
+
+
+/* The LINE under the card header (lenght dictated by the lenght of text)*/
+.card-title::after {
+    content: '';
+    position: absolute;
+    height: 4px;
+    left: calc(var(--padding) * -1);
+    bottom: -1px;
+    width: calc(100% + var(--padding));
+    background-color: var(--clr-accent-400);
+
+    transform-origin: left;
+    transition: transform 500ms ease
+}
+
+.card:hover .card-title::after,
+.card:focus-within .card-title::after {
+    transform: scaleX(1);
+}
+
+.card-body {
+    color: rgb(255, 255, 255 / 0.85);
+}
+
+/* "Info" button styling */
+.button {
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--clr-accent-900);
+    background-color: var(--clr-accent-400);
+    padding: .2em 1.25em;
+    border-radius: .5rem;
+}
+
+.wrapper .card-content .card-body {
+    padding-bottom: 1rem;
+}
+
+/* Changes button color on hover */
+.button:hover, 
+.button:focus {
+    background-color: var(--clr-neutral-100);
+    color: var(--clr-neutral-900);
+}
+
+
+@media (max-width: 1095px)  {
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        /* margin: 2.5rem 0 2rem 8rem;  */
+    }
+}
+
+@media (max-width: 950px)  {
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        /* margin: 2.5rem 0 2rem 8rem;  */
+    }
+
+    .card-content {
+        --padding: 1.5rem;
+        padding: var(--padding);
+        background: linear-gradient( 
+            rgba(0, 0, 0, 0), 
+            rgba(0, 0, 0, 0.45), 
+            rgba(0, 0,0, 1)
+        );
+        text-align: center;
+    }
+
+    .button {
+        cursor: pointer;
+        display: inline-block;
+        text-decoration: none;
+        color: var(--clr-accent-900);
+        background-color: var(--clr-accent-400);
+        padding: .2em 1.25em;
+        border-radius: .5rem;
+    }
+    
+}
+
+/* TAB hover fix */
+@media (hover) {
+    .card-content {
+        transform: translateY(65%);
+        transition: transform 500ms ease;
+    }
+    .card:hover .card-content,
+    .card:focus-within .card-content{
+        transform: translateY(0);
+        transition-delay: 500ms; /* delays card content fade in on hover */
+    } 
+
+    .card:focus-within.card-content {
+        transition-duration: 0ms;
+    }
+
+    .card-content > *:not(.card-title) {
+        opacity: 0;
+        transition: opacity 500ms linear;
+    }
+
+    .card:hover .card-content > *:not(.card-title),
+    .card:focus-within .card-content > *:not(.card-title) {
+        opacity: 1;
+        transition-delay: 500ms;  /* Delays text & button fade in */
+    }
+    
+    .card-title::after {
+        transform: scaleX(0);
+    }
+}
+
+
+/* Removes animations for users who have turned off animations from windows */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms
+        !important;
+        animation-iteration-count: 1
+        !important;
+        transition-duration: 0.01ms
+        !important;
+        scroll-behavior: auto !important;
+        transition-delay: 0ms !important;
+    }
+}
