@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #201f20;
+  color: #fff;
+}
+
+h1 {
+  text-align: center;
+}
+
+.again {
+  text-align: left;
+}
+
+.between {
+  text-align: right;
+}
